@@ -1,0 +1,32 @@
+#galery_content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.item_app {
+    background-color:#009688;
+    border: 4px solid #353a40;
+    border-radius: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 300px;
+    width: 25000px;
+}
+
+.item_app > a{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #353a40;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+}
+
+.fa{
+    font-size: 50px;
+}

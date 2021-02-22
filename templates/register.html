@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}Register{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+{% endblock %}
+
+{% block body %}
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">App galery</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Calculadora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cuenta de ahorros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Crear cuenta unica</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+    {% for mensaje in get_flashed_messages() %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{mensaje}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+    <h1>Register - sistema unificado de acceso</h1>
+    <form action="{{url_for('register')}}" method="POST">
+        {{wtf.quick_form(register_form)}}
+    </form>
+{% endblock %}
