@@ -1,0 +1,26 @@
+{
+    "eruisacosta@gmail.com": {
+        "password": "Bezalel1",
+        "name": "Acosta",
+        "last_name": "E",
+        "is_logged_in": 0
+    },
+    "menluis@gmail.com": {
+        "password": "654321",
+        "name": "Luis",
+        "last_name": "Mendoza",
+        "is_logged_in": 0
+    },
+    "acostae@utb.edu.co": {
+        "password": "Bezalel1",
+        "name": "Acosta",
+        "last_name": "E",
+        "is_logged_in": 0
+    },
+    "tr3you@gmail.com": {
+        "password": "Bezalel1",
+        "name": "Erick",
+        "last_name": "Ruiz",
+        "is_logged_in": 0
+    }
+}

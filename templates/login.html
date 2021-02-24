@@ -4,12 +4,12 @@
 {% block title %}Login{% endblock %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{url_for('static', filename='css/login.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
 {% endblock %}
 
 {% block body %}
     {% for mensaje in get_flashed_messages() %}
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
         {{mensaje}}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -21,4 +21,6 @@
     <form action="{{url_for('login')}}" method="POST">
         {{wtf.quick_form(login_form)}}
     </form>
+
+    <a href="{{url_for('index')}}">Ir a la App galery</a>
 {% endblock %}
