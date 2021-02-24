@@ -10,7 +10,7 @@ bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'qoNhFeWiVWO4u602pAIb'
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template('apps.html')
 
@@ -97,7 +97,7 @@ def calculadora():
         return make_response(redirect(url_for('single_sign_on', url_app='/calculadora')))
 
 
-@app.route('/singleSignOn/<url_app>')
+@app.route('/singleSignOn/<url_app>', methods=['GET', 'POST'])
 def single_sign_on(url_app):
     try:
         session_state = session['user_session_state']
@@ -113,7 +113,7 @@ def single_sign_on(url_app):
         return make_response(redirect('/login'))
 
 
-@app.route('/logout')
+@app.route('/logout', , methods=['GET', 'POST'])
 def logout():
     session.clear()
     return make_response(redirect('/'))
