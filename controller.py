@@ -113,7 +113,7 @@ def single_sign_on(url_app):
         return make_response(redirect('/login'))
 
 
-@app.route('/logout', , methods=['GET', 'POST'])
+@app.route('/logout', methods=['GET', 'POST'])
 def logout():
     session.clear()
     return make_response(redirect('/'))
